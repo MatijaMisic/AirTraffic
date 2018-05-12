@@ -22,22 +22,12 @@ class MainPage extends Component {
             this.setState({warning:'hideWarning', autorization:true})
 
             navigator.geolocation.getCurrentPosition((position) => {
-                this.setState({lat: position.coords.latitude, long: position.coords.longitude})
-
-                const url = `http://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=${this.state.lat}&lng=${this.state.long}&fDstL=0&fDstU=100`
                 
-                requestServices.getRequest(url)
-                .then(response => {
-                   console.log(response);
-                   
-                    return response.acList.map((flight) => {
-                        return new Flight (flight.Alt, flight.Call, flight.CNum)
-                    })
-                }
-                ).then((flights) => {
-                    this.setState({flightList : flights})
-                    
-                });
+                this.setState({lat: position.coords.latitude, long: position.coords.longitude})
+                const url = `http://public-api.adsbexchange.com/VirtualRadar/AircraftList.json?lat=${this.state.lat}&lng=${this.state.long}&fDstL=0&fDstU=100`
+                this.setState({url:url})
+
+               this.fetchFlights(url);
                 
             })
             
@@ -46,10 +36,38 @@ class MainPage extends Component {
         }
     }
 
+    fetchFlights = (url) => {
+        requestServices.getRequest(url)
+        .then(response => {
+           console.log(response);
+           
+            return response.acList.map((flight) => {
+                return new Flight (flight.Alt, flight.Call, flight.CNum)
+            })
+        }
+        ).then((flights) => {
+            const sortFLightByAltitude = [...flights];
+            const sortedFligths = sortFLightByAltitude.sort((a, b) => {
+                return b.altitude - a.altitude
+            })
+            
+            this.setState({flightList : sortedFligths})
+            
+        });
+    }
     
     componentDidMount () {
         this.setState({loading:false})
+        setInterval( () => {
+            this.fetchFlights(this.state.url)
+            console.log("novi fetch");
+            
+           },60000)
     }
+
+    componentWillUnmount() {
+        clearInterval(this.fetchFlights());
+      }
 
     render() {
         return (

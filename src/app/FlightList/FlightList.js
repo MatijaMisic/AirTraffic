@@ -1,12 +1,15 @@
 import React from 'react';
 import FlightItem from './FlightItem';
+import loading from './gif-aviao.gif';
 
-const FlightList = ( {flightList, loading} ) => {
+import './FlightList.css'
+
+const FlightList = ( {flightList} ) => {
 
     let flightItem = null;
 
     if(!flightList) {
-        flightItem = (<div> </div>)
+        flightItem = <img src={loading} alt='loading' className="loading" />;
     } else {
         flightItem = flightList.map((flight, index) => {
             return <FlightItem key={index} flightInfo = {flight} />

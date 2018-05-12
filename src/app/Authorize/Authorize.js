@@ -8,10 +8,6 @@ const Authorize = ({ authorize, show }) => {
 
                 <div className="col s12 m12">
                     <div className="card">
-                        <div className="card-image">
-
-                            <span className="card-title">Card Title</span>
-                        </div>
                         <div className="card-content">
                             <p>Please authorize your geolocation</p>
                         </div>

@@ -1,3 +1,4 @@
-/* .welcomeText {
-    background:url('../background.jpg');
-} */
+.welcomeText {
+    /* background:url('../background.jpg');*/
+    text-align: center;
+}

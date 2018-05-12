@@ -1,36 +1,5 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-}
-
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
-
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
 }
 
 .showWarning {
@@ -39,4 +8,21 @@
 
 .hideWarning {
   display: none;
+}
+
+.collection .collection-item.avatar .title {
+  font-size: 14px;
+}
+
+.flightNumber {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media(min-width: 760px) {
+  .m4{
+    text-align: center;
+    padding-top: 10px !important;
+  }
+ 
 }
