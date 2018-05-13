@@ -2,23 +2,18 @@ import React from 'react';
 
 const Footer = () => {
     return (
-        <footer class="page-footer">
-        <div class="container">
-          <div class="row">
-            <div class="col l6 s12">
-              <h5 class="white-text">Footer Content</h5>
-              <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+        <footer className="page-footer indigo lighten-2 myFooter">
+            <div className="row">
+                <div className="col l6 s12">
+                    <h5 className="white-text">Air traffic control project</h5>
+                </div>
+                <div className="col l4 offset-l2 s12">
+                </div>
             </div>
-            <div class="col l4 offset-l2 s12">
-            </div>
+            <div className="footer-copyright">
+                © 2018 Copyright Matija Mišić
           </div>
-        </div>
-        <div class="footer-copyright">
-          <div class="container">
-          © 2014 Copyright Text
-          </div>
-        </div>
-      </footer>  
+        </footer>
     );
 };
 

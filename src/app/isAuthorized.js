@@ -7,20 +7,15 @@ const isAuthorized = () => {
     return class authenticate extends Component {
 
         toDispay = () => {
-            console.log(localStorage.getItem('authorized'));
-            
-            const key = localStorage.getItem('authorized') ? true : false;
-            console.log(key);
-            
+            const key = localStorage.getItem('authorized') ? true : false;    
             return key ? <App /> : <Authorize />
         }
+
         render () {
             return this.toDispay();
         }
     }
-        
-    
-    
+            
 };
 
 export default isAuthorized;

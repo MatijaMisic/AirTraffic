@@ -8,8 +8,7 @@ import airWest from '../../../assets/img/airWest.jpg'
 
 const FlightItem = ({ flightInfo }) => {
 
-    const flightIcon = (flightInfo.direction === "E") ? airEast : airWest;
-
+    const flightIcon = (flightInfo.direction === "E") ? airEast : airWest;    
 
     return (
         <Link key={flightInfo.id} to={`flight/${flightInfo.id}`}>

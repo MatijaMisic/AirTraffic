@@ -22,15 +22,11 @@ class MainPage extends Component {
     fetchFlights = (url) => {
         requestServices.getRequest(url)
             .then(response => {
-                console.log(response);
-
                 return response.acList.map((flight) => {
                     return new Flight(flight.Id, flight.Alt, flight.Call, flight.CNum, flight.Man, flight.Mdl, flight.From, flight.To, flight.Op)
                 })
             }
-            ).then((flights) => {
-                console.log(flights);
-                
+            ).then((flights) => { 
                 const sortFLightByAltitude = [...flights];
                 const sortedFligths = sortFLightByAltitude.sort((a, b) => {
                     return b.altitude - a.altitude
@@ -62,7 +58,6 @@ class MainPage extends Component {
 
         this.interval = setInterval(() => {
             this.fetchFlights(this.state.url)
-            console.log("novi fetch");
         }, 60000)
     }
 
@@ -72,7 +67,7 @@ class MainPage extends Component {
 
     render() {
         return (
-            <main className='container background'>
+            <main className='container'>
                <FlightList flightList={this.state.flightList} loading={this.state.loading}/> 
             </main>
         );

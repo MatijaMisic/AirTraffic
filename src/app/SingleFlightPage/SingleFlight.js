@@ -25,14 +25,14 @@ const SingleFlight = (props) => {
                     </div>
                     <div className="row card-content">
                         <div className="col s12">
-                            <h3>Flight origin: {selectedFLight.originAirport}</h3>
-                            <h3>Destination: {selectedFLight.destinationAirport}</h3>
+                            <h3><span className='singleFlight'>Flight origin:</span> {selectedFLight.originAirport}</h3>
+                            <h3><span className='singleFlight'>Destination:</span> {selectedFLight.destinationAirport}</h3>
                         </div>
                         <div className="col s12">
-                            <h3>Airplane: {selectedFLight.model}</h3>
+                            <h3><span className='singleFlight'>Airplane:</span> {selectedFLight.model}</h3>
                         </div>
                         <div className="col s12">
-                            <h3>{selectedFLight.logo}</h3>
+                            <h3><span className='singleFlight'>Company:</span>{selectedFLight.logo}</h3>
                         </div>
                     </div>
                 </div>
