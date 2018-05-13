@@ -1,8 +1,22 @@
 import React from 'react';
+import { Link } from 'react-router-dom'
 import './Authorize.css'
 
-const Authorize = ({ authorize, show }) => {
+const Authorize = () => {
 
+    let show = "hideWarning";
+
+    const isAuthorized = () => {
+        localStorage.setItem('authorized', 'true')
+    }
+
+
+    const displayWarning = () => {
+        show = "showWarning"
+    }
+
+    console.log(show);
+    
     return (
         <div className="row welcomeText">
 
@@ -12,10 +26,10 @@ const Authorize = ({ authorize, show }) => {
                             <p>Please authorize your geolocation</p>
                         </div>
                         <div className="card-action">
-                            <a className="waves-effect waves-light btn-large" onClick={() => authorize(true)}>Yes</a>
+                            <Link to='/'><p className="waves-effect waves-light btn-large" onClick={isAuthorized}>Yes</p></Link>
                             <br />
                             <br />
-                            <a className="waves-effect waves-light btn-large" onClick={() => authorize(false)}>No</a>
+                            <a className="waves-effect waves-light btn-large" onClick={displayWarning}>No</a>
                         </div>
                         <div className={`card-action ${show}`}>
                             <p>Please authorize geolocation</p>

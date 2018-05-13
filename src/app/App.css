@@ -15,8 +15,20 @@
 }
 
 .flightNumber {
-  font-size: 15px;
-  font-weight: bold;
+  font-size: 20px;
+  padding-top: 2px;
+}
+
+.customLogo {
+  margin-top: 0;
+}
+
+h3 {
+  font-size: 1.52rem;
+}
+
+.row .col.s12 {
+  padding-top: 10px;
 }
 
 @media(min-width: 760px) {
@@ -25,4 +37,21 @@
     padding-top: 10px !important;
   }
  
+}
+
+.collection .collection-item:last-child {
+  border-bottom: 1px solid #e0e0e0 !important;
+}
+
+
+
+.collection .collection-item.avatar .secondary-content {
+  top:30px;
+  font-size: 1.30rem;
+}
+
+.flightNumberHeader {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.30rem;
 }

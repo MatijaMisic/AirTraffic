@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
 import airEast from './airEast.jpg'
 import airWest from './airWest.jpg'
 
@@ -10,19 +12,18 @@ const FlightItem = ( { flightInfo } ) => {
 
 
     return (
-        <li className="collection-item avatar">
-        <div className="col s12 m4">
+        <Link key={flightInfo.id} to={`flight/${flightInfo.id}`}> <li className="collection-item avatar">
+       <div className="col s12 m4">
             <img src={flightIcon} alt="" className="circle" />
             </div>
             <div className="col s12 m4">
-            <span className="title">Flight Number</span>
             <p className="flightNumber">{flightInfo.flightNumber}
              </p>
              </div>
              <div className="col s12 m4">
-            <p className="secondary-content">{flightInfo.altitude} meters</p>
+            <p className="secondary-content">{flightInfo.altitude}</p>
             </div>
-        </li>
+        </li></Link>
     );
 };
 
