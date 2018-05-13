@@ -1,6 +1,6 @@
 import React from 'react';
 
-import airbus from './airbus.jpg';
+import airbus from '../../assets/img/airbus.jpg';
 
 const SingleFlight = (props) => {
 
@@ -14,9 +14,6 @@ const SingleFlight = (props) => {
         if (id === flight.id)
             selectedFLight = flight
     });
-
-    console.log("selected flight", selectedFLight);
-
 
     return (
         <div className="row container">

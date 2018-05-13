@@ -1,8 +1,9 @@
 import React from 'react';
-import FlightItem from './FlightItem';
-import loading from './gif-aviao.gif';
 
-import './FlightList.css'
+import FlightItem from '../FlightList/FlightItem'
+import loading from '../../../assets/img/gif-aviao.gif'
+import directionIcon from '../../../assets/img/compass.png'
+
 
 const FlightList = ({ flightList }) => {
 
@@ -22,7 +23,7 @@ const FlightList = ({ flightList }) => {
             <ul className="collection">
                 <li className="collection-item avatar listHeader">
                     <div className="col s12 m4">
-                    <img src='{flightIcon}' alt="" className="circle" />
+                    <img src={directionIcon} alt="" className="circle" />
                     </div>
                     <div className="col s12 m4">
                        

@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+ background-color: #F9F9F9;
+}
+
 .showWarning {
   display: block;
 }
@@ -10,13 +14,50 @@
   display: none;
 }
 
+.collection {
+  background-color: white;
+}
 .collection .collection-item.avatar .title {
   font-size: 14px;
 }
 
 .flightNumber {
   font-size: 20px;
-  padding-top: 2px;
+  padding-top: 3%;
+}
+
+.flightNumberHeader {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 1.30rem;
+  padding-top: 3%;
+}
+
+@media (max-width:640px) {
+  .flightNumber {
+    padding-top: 0.5%;
+  }
+  .flightNumberHeader {
+    padding-top: 1%;
+  }
+}
+
+@media (min-width:641px) {
+  .flightNumber {
+    padding-top: 6%;
+  }
+  .flightNumberHeader {
+    padding-top: 1%;
+  }
+}
+
+@media (min-width:1300px) {
+  .flightNumber {
+    padding-top: 3%;
+  }
+  .flightNumberHeader {
+    padding-top: 3%;
+  }
 }
 
 .customLogo {
@@ -50,8 +91,33 @@ h3 {
   font-size: 1.30rem;
 }
 
-.flightNumberHeader {
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 1.30rem;
+.indigo.lighten-2 {
+  background-color: #6F97C8 !important;
 }
+
+.plane {
+  width: 40%;
+  display: inherit;
+  animation: fly;
+  animation-duration: 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes fly{
+  from{ transform: translateX(0%)}
+  to{transform: translateX(120%)}
+}
+
+.welcomeText {
+  text-align: center;
+}
+
+.loading {
+  display: block;
+  margin: 0 auto;
+  width: 70%;
+}
+
+

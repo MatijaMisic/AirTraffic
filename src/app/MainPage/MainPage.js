@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 
-import './MainPage.css'
 import { requestServices } from '../../services/requestServices';
 import Flight from '../../entities/flight';
-import FlightList from '../FlightList/FlightList';
+import FlightList from './FlightList/FlightList';
 
 class MainPage extends Component {
     constructor() {
@@ -49,10 +48,7 @@ class MainPage extends Component {
     }
 
     componentDidMount() {
-
-        
-        console.log("mountovala se");
-        
+   
         navigator.geolocation.getCurrentPosition((position) => {
 
             this.setState({ lat: position.coords.latitude, long: position.coords.longitude })
@@ -71,19 +67,14 @@ class MainPage extends Component {
     }
 
     componentWillUnmount() {
-        console.log("unmount");
-        
         clearInterval(this.interval);
     }
 
     render() {
-
-        
-
         return (
-            <div className='container background'>
+            <main className='container background'>
                <FlightList flightList={this.state.flightList} loading={this.state.loading}/> 
-            </div>
+            </main>
         );
     }
 }
