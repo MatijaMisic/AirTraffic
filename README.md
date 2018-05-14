@@ -2,7 +2,7 @@
 
 Job application
 
-![No more Tabs](/src/assets/images/gif-aviao.gif)
+![No more Tabs](/src/assets/img/plane.gif)
 
 # Showcasing 
 
