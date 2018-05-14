@@ -14,7 +14,8 @@ Job application
 # Stack
 
     -   Language:   HTML5, CSS3, JS(ES6)
-    -   Framework:  React, Materialize
+    -   Framework:  Materialize
+    -   Library: React, Axios
     -   Created with: [Create React App](https://github.com/facebook/create-react-app)
     
 ## Author
