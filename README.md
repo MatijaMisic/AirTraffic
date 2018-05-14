@@ -18,6 +18,10 @@ Job application
     -   Library: React, Axios
     -   Created with: [Create React App](https://github.com/facebook/create-react-app)
     
+```sh
+Use Cross Domain - CORS plugins for FireFox, Chrome ect. to deal with 'Cross-Origin Request Blocked'
+```
+    
 ## Author
 
 * **Matija Mišić** - (https://github.com/MatijaMisic) 
