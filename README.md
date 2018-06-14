@@ -1,6 +1,6 @@
 # AirTraffic control app
 
-Job application
+Job application - check air traffic near your location 
 
 ![No more Tabs](/src/assets/img/plane.gif)
 
