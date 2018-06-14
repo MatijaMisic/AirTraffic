@@ -38,7 +38,7 @@ class MainPage extends Component {
                            
             })
             .catch((error) => {
-                console.log("fetch stoped");
+                console.log(error);
                 
             });
     }

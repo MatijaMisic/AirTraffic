@@ -1,11 +1,8 @@
-import axios from 'axios';
+import axios from 'axios-jsonp-pro';
 
 export class requestServices {
-
-    
-
     static getRequest = (url) => {
-        return axios.get(url).then(response => response.data)
+        return axios.jsonp(url).then(response => response)
     }
 
 }
