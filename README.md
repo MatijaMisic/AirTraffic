@@ -1,4 +1,4 @@
-# AirTraffic control app
+# AirTraffic control webapp
 
 Job application - check air traffic near your location 
 
